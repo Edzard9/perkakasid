@@ -1,4 +1,4 @@
-const CACHE = 'perkakasid-v2';
+const CACHE = 'perkakasid-v3';
 const BERKAS = [
   'index.html',
   'styles.css',
@@ -8,6 +8,7 @@ const BERKAS = [
   'tools/terbilang.js',
   'tools/penghitung-kata.js',
   'tools/json-formatter.js',
+  'tools/daftar-pustaka.js',
 ];
 
 self.addEventListener('install', (e) => {
