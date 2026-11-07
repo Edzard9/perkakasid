@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PerkakasID - Perkakas digital orang Indonesia</title>
+  <meta name="description" content="Kumpulan perkakas digital yang berjalan sepenuhnya di browser. Tanpa server, tanpa build step, tanpa dependensi.">
+  <meta name="theme-color" content="#0f766e">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20192%20192'%3E%3Crect%20width='192'%20height='192'%20rx='40'%20fill='%230f766e'/%3E%3Ctext%20x='96'%20y='140'%20font-family='Arial,sans-serif'%20font-size='120'%20font-weight='bold'%20fill='%23fff'%20text-anchor='middle'%3EP%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="situs">
+    <div class="wadah kepala">
+      <div>
+        <a class="logo" href="#/">Perkakas<span>ID</span></a>
+        <p class="tagline" id="tagline">Perkakas digital orang Indonesia</p>
+      </div>
+      <nav id="ganti-bahasa" class="ganti-bahasa" aria-label="Bahasa antarmuka">
+        <button type="button" data-bahasa="id" aria-pressed="true">ID</button>
+        <span aria-hidden="true">|</span>
+        <button type="button" data-bahasa="en" aria-pressed="false">EN</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="beranda" class="wadah">
+    <div class="cari">
+      <label for="input-cari" id="label-cari">Cari tool</label>
+      <input id="input-cari" type="search" placeholder="Ketik nama atau jenis tool, misal: terbilang" autocomplete="off">
+    </div>
+    <nav id="kategori" class="kategori" aria-label="Filter kategori tool"></nav>
+    <section id="grid-tool" class="grid-tool"></section>
+    <p id="kosong" class="kosong" hidden>Tidak ada tool yang cocok. Coba kata kunci atau kategori lain.</p>
+  </main>
+
+  <section id="area-tool" class="wadah" hidden>
+    <a class="kembali" id="tautan-kembali" href="#/">Kembali ke daftar tool</a>
+    <div id="isi-tool"></div>
+  </section>
+
+  <footer>
+    <div class="wadah">
+      <p id="footer-catatan">Semua tool berjalan sepenuhnya di browser Anda. Data yang Anda masukkan tidak pernah dikirim ke server.</p>
+      <p><a href="https://github.com/Edzard9/perkakasid">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="lang.js"></script>
+  <script src="tools/terbilang.js"></script>
+  <script src="tools/penghitung-kata.js"></script>
+  <script src="tools/json-formatter.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
